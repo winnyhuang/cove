@@ -1,8 +1,11 @@
-#intervals h1 {
-	padding: 1em;
-	left: 0;
-	background-color: #8B8378;
-	color: black;
+.search_bar {
+	border:0px; /*important*/
+	background-color:transparent; /*important*/
+	position:absolute; /*important*/
+	top:4px;
+	left:9px;
+	width:256px;
+	height:28px;
 }
 
 #intervals li {
