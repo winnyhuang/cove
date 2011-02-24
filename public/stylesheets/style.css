@@ -624,6 +624,13 @@ input[type=search] {
 	opacity:1;
 	background:#EC8723;
 	color:white;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.create_snippet{
+    background: #383838;
+    height: auto;
 }
 
 .create_interval_button:hover{
@@ -638,6 +645,7 @@ input[type=search] {
 
 .markstart {
     margin-top:10px;
+    margin-left: 20px;
 	height:30px;
 	width:90px;
 	opacity:1;
@@ -655,7 +663,7 @@ input[type=search] {
 
 .markend {
 	margin-top:10px;
-	margin-left:83px;
+	margin-left:70px;
 	height:30px;
 	width:90px;
 	opacity:1;
@@ -674,21 +682,46 @@ input[type=search] {
 	background:#FF3333;
 }
 
+.interval_browse{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: block;
+    float: left;
+}
+
+.snippet{
+    padding: 10px;
+    width: 450px;
+}
+
+.snippet:hover{
+    opacity: 5;
+    background:#757575;
+}
+
+.snippet p{
+    color: #EC8723;
+    font-size: 14px;
+}
+    
+
 .interval_form {
 	margin-top:10px;
     background: #383838;
    	height:270px;
+    float: left;
+    display: inline;
 }
 
 .interval_form legend{
 	color: #EC8723;
-    font-size: 14px;
+    font-size: 20px;
     text-align: left;
-    margin-bottom:4px;
+    padding-bottom: 10px;
 }
 
 .interval_form fieldset{
-	margin-top:20px;
 	margin-left:20px;
 }
 
@@ -701,11 +734,6 @@ input[type=search] {
 .interval_form input{
 	width:300px;
 	margin-bottom:7px;
-}
-
-.interval_form textarea{
-    width: 300px;
-    margin-bottom:7px;
 }
 
 .save_cancel_button{
@@ -894,7 +922,8 @@ div.search_header{
 	width: 360px;
 }
 
-.search_header #selectors{
+.search_
+er #selectors{
 	margin-top:15px;
 	float:right;
 }

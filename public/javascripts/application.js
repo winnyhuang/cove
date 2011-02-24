@@ -15,26 +15,29 @@ $(document).ready(function(){
     return false;
   });
   
-  $(".create_snippet").hide();
+  $('.interval_form').hide();
   $('.create_interval_button').click(function(){
-    $(".create_snippet").slideToggle("slow");
-    $('.create_interval_button').hide();
-    $(this).toggleClass("active"); 
-    $('.create_interval_button').ide();
+    $('.interval_form').show("slide", {direction: "left"}, 1000);
     return false;
   });
   
   $('button.cancel').click(function(){
-    $('.create_snippet').slideToggle("fast");
+    $('.interval_form').hide("slide", {direction: "left"}, 1000);
     $('.create_interval_button').show();
     return false;
   });
   
    $('button.save').click(function(){
-    $('.create_snippet').slideToggle("fast");
+    $('.interval_form').hide("slide", {direction: "left"}, 1000);
     $('.create_interval_button').show();
     return false;
   });
+  
+  $('.snippet').click(function(){
+    $('.interval_form').hide();
+    return false;
+  });
+    
  
   $('#new_snippet').submit(function(event){
     $('#snippet_offset').val( videoPlayer.snippetStart() );
