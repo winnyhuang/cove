@@ -695,16 +695,21 @@ input[type=search] {
     width: 450px;
 }
 
-.snippet:hover{
-    opacity: 5;
-    background:#757575;
-}
-
 .snippet p{
-    color: #EC8723;
+    color: #0297c1;
     font-size: 14px;
 }
     
+
+.snippet:hover{
+	color:#000000;
+    opacity: .7;
+    background:#757575;
+}
+
+.snippet:hover p{
+	color:white;
+}
 
 .interval_form {
 	margin-top:10px;
