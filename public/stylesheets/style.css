@@ -611,25 +611,22 @@ input[type=search] {
 }
 */
 
-.snippet_button{	
-	display:hidden;
-	text-align:right;
-	border:solid #2F2F2F;
-}
-
 .create_interval_button{
 	height:30px;
-	width:130px;
+	width:100px;
 	border:transparent;
 	opacity:1;
 	background:#EC8723;
 	color:white;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
+
+
 
 .create_snippet{
     background: #383838;
+    margin-top: 10px;
     height: auto;
 }
 
@@ -744,6 +741,13 @@ input[type=search] {
 .save_cancel_button{
 	margin-top:10px;
 	text-align:right;
+}
+
+.snippet_edit{
+    width: 200px;
+    height: 100px;
+    background-color: #757575;
+    margin-top:30px;
 }
 
 .cancel {

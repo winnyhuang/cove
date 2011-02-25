@@ -16,25 +16,32 @@ $(document).ready(function(){
   });
   
   $('.interval_form').hide();
+  $('.mark_times').hide();
   $('.create_interval_button').click(function(){
+    $('.create_interval_button').hide();
+    $('.mark_times').show("slide", {direction: "up"}, 1000);
     $('.interval_form').show("slide", {direction: "left"}, 1000);
     return false;
   });
   
   $('button.cancel').click(function(){
     $('.interval_form').hide("slide", {direction: "left"}, 1000);
+    $('.mark_times').hide("slide", {direction: "up"}, 1000);
     $('.create_interval_button').show();
     return false;
   });
   
    $('button.save').click(function(){
     $('.interval_form').hide("slide", {direction: "left"}, 1000);
+    $('.mark_times').hide("slide", {direction: "up"}, 000);
     $('.create_interval_button').show();
     return false;
   });
   
+  $('.snippet_edit').hide();
   $('.snippet').click(function(){
     $('.interval_form').hide();
+    $('.snippet_edit').show();
     return false;
   });
     
