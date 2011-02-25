@@ -1,6 +1,7 @@
 class IntervalsController < ApplicationController
     before_filter :authenticate_user!
     before_filter :require_nda
+    before_filter :find_interval, :only => [:show, :update, :edit]
     
 	def index
 		@camera_angles = Interval.unique_angles
@@ -9,14 +10,16 @@ class IntervalsController < ApplicationController
 		@phrase_types = Interval.unique_phrase_types
 		@phrase_names = Interval.unique_phrase_names
 
-    @intervals = Interval.search params
+    search = Interval.search_with params
+    @intervals = search.results
 
     render 'index'
   end
 
   def show
-    @interval = Interval.find(params[:id])
-    @tags = Tag.all
+    @tags = @interval.taggings
+    @phenomenon = @interval.codings.phenomenon
+    @people = @interval.codings.people
 
     render "show"
   end
@@ -27,7 +30,6 @@ class IntervalsController < ApplicationController
   end
 
   def edit
-    @interval = Interval.find(params[:id])
     render "edit"
   end
 
@@ -42,7 +44,6 @@ class IntervalsController < ApplicationController
   end
 
   def update
-    @interval = Interval.find(params[:id])
     @interval.attributes = {'tag_ids' => []}.merge(params[:interval] || {})
     
     if @interval.update_attributes(params[:interval])
@@ -52,11 +53,14 @@ class IntervalsController < ApplicationController
     end
   end
 
-  # DELETE /intervals/1
-  # DELETE /intervals/1.xml
   def destroy
     @interval = Interval.find(params[:id])
     @interval.destroy
     redirect_to(intervals_url)
+  end
+
+  private
+  def find_interval
+    @interval = Interval.find(params[:id])
   end
 end
