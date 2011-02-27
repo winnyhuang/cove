@@ -747,45 +747,49 @@ div#video div p {
     margin-left: 10px;
 }
 
-.create_snippet{
-    background: #383838;
-    height: auto;
-}
-
 .create_interval_button:hover{
  	opacity:.5;
 	background:#EC8723;
 }
 
 
-.mark_button{
-	text-align:left;
+.mark_times{
+	text-align:center;
 }
 
+
+.mark_buttons{
+	text-align:center;
+}
+
+.mark_times input{
+	display:inline;
+	margin-top:1px;
+	border:transparent;
+	height:20px;
+    width:88px;
+}
+
+
 .markstart {
-    margin-top:10px;
-    margin-left: 20px;
+	display:inline;
 	height:30px;
 	width:90px;
-	opacity:1;
 	background:#00CC00;
 	color:white; 
 	border:transparent;
 }
 
-.mark_button input{
+#end_mark{
 	margin-left:5px;
-	border:transparent;
-	height:20px;
-    width:70px;
 }
 
 .markend {
+	display:inline;
 	margin-top:10px;
-	margin-left:70px;
+	margin-left:5px;
 	height:30px;
 	width:90px;
-	opacity:1;
 	background:#FF3333;
 	color:white; 
 	border:transparent;
@@ -806,6 +810,7 @@ div#video div p {
     margin-left: 20px;
     margin-bottom: 20px;
     display: block;
+    background:#383838;
     float: left;
 }
 
@@ -815,7 +820,7 @@ div#video div p {
 }
 
 .snippet p{
-    color: #0297c1;
+    color: #EC8723;
     font-size: 14px;
 }
     
@@ -825,9 +830,46 @@ div#video div p {
     background:#222222;
 }
 
-.interval_form {
+.outer-duration{
+	width:500px;
+}
+
+.max-duration{
+    /*position:absolute;*/
+	display:block;
+	height:20px;
+	width:460px;
+}
+
+.snippet-duration{
+	/*position: absolute;*/
+	margin-top:4px;
+	float:left;
+	width: 50px;
+	height:5px;
+	background:#0297c1;
+}
+
+
+.start-timestamp, .end-timestamp{
+	margin-top:0px;
+	font-size:10px;
+	float:left;
+	color:white;
+}
+
+.start-timestamp{
+	margin-right:3px;
+	text-align: right;
+}
+
+.end-timestamp{
+	margin-left:3px;
+	text-align: left;
+}
+
+.interval_form, .snippet_info {
 	margin-top:20px;
-   	height:270px;
     float: left;
     display: inline;
 }
@@ -855,7 +897,7 @@ div#video div p {
 }
 
 .save_cancel_button{
-	margin-top:35px;
+	margin-top:15px;
 	text-align:right;
 }
 
@@ -888,6 +930,58 @@ div#video div p {
 	opacity:.5;
 	background:#0297c1;
 }
+
+.info_title{
+	color: #EC8723;
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.info_time{
+	color:#0297c1;
+}
+
+.info_description{
+ 	text-align: left;
+    margin-bottom:3px;
+}
+
+.delete_edit_button{
+	margin-top:15px;
+	text-align:right;
+	vertical-align: bottom;
+}
+
+.delete {
+	height:30px;
+	width:90px;
+	background:#FF3333;
+	color:white; 
+	border:transparent;
+}
+
+.edit {
+	margin-left:10px;
+	margin-right:10px;
+	height:30px;
+	width:90px;
+	background:#0297c1;
+	color:white; 
+	border:transparent;
+}
+
+.delete:hover {
+	opacity:.5;
+	background:#FF3333;
+}
+
+.edit:hover{
+	opacity:.5;
+	background:#0297c1;
+}
+
+
 
 
 /* end style adjustments for show.html */
