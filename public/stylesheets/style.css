@@ -689,7 +689,7 @@ input[type=search] {
 
 .snippet{
     padding: 10px;
-    width: 450px;
+    width: 500px;
 }
 
 .snippet p{
@@ -744,7 +744,7 @@ input[type=search] {
 }
 
 .snippet_edit{
-    width: 200px;
+    width: 100px;
     height: 100px;
     background-color: #757575;
     margin-top:30px;
