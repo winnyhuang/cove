@@ -1,28 +1,3 @@
-<div class="interval_show">
-
-	<%= simple_form_for @interval do |f| %>
-	 
-	<div class="grid_5 show_metadata">
-		<div>
-			<h1>ID #: <%= @interval.session_type %></h1> <!--Session Type-->
-			<h2><%= @interval.phrase_name %></h2>
-			<h2><%= @interval.phrase_type %></h2>
-			<h2><%= @interval.task_name %></h2>
-		</div>
-	</div>
-	
-	<div class="grid_3 show_camera_angle">
-		<div class="cam_angle">
-			<%= image_for_camera_angle @interval.camera_angle %>
-		</div>
-	</div>
-	
-	<div class="grid_8">&nbsp</div>
-	
-	<br style="clear:both"/>
-	<% end %>
-	
-	<div class="clear"></div>
 
 	<div class="grid_8 video">
 		<!-- Begin VideoJS -->
@@ -31,9 +6,6 @@
      		<video id="cove-video-player" class="video-js" width="480" height="270" controls>
  				<source src="http://www.yo-yo.org/mp4/yu3.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
     	 	</video>
-    	<div>
-		<p><%= video_tag @interval.filename, :controls => true, :height => 270, :width => 480 %></p>
-		</div>
 
     </div>
           <!-- End VideoJS -->
@@ -44,44 +16,133 @@
 
 	<div class="clear"></div>
 
+
 	<div class="clear"></div>
 	
 	<div class="grid_16 create_snippet">
+	
+	<div class="grid_2 snippet_button">
+    	<%= f.submit "Create Snippet", :class => "create_interval_button" %>
+    </div>
 
-
-		<div class="alpha grid_11 mark_button">
-			<%= f.submit "Create Snippet", :class => "create_interval_button" %>
-			<div class="mark_times">
-			<button class="markstart">Start Mark</button><input type="text" id="start_mark"></input>
-   	 		<button class="markend">End Mark</button><input type="text" id="end_mark"></input>
+	<div class="clear"></div>
+	
+	<div class="grid_16 display_snippet">
+		<div class="alpha grid_11">
+		
+			<div class="grid_11 mark_buttons">
+			<button class="markstart">Start Mark</button>
+   	 		<button class="markend">End Mark</button>
    	 		</div>
-    		
+   	 		
+			<div class="grid_11 mark_times">
+			<input type="text" id="start_mark"></input>
+			<input type="text" id="end_mark"></input>
+			</div>
+			
     		<!-- grid for browsing intervals -->
     		<div class="interval_browse omega">
     			<div class="snippet">
 					<p> Snippet Title 1 </p>
+							<div class="outer-duration">
+								<div class="max-duration">
+									<div class="start-timestamp" style="width:20%">
+										2:30
+									</div>
+
+									<div class="snippet-duration" style="width:40%">
+									</div>	
+									
+									<div class="end-timestamp">
+										3:40
+									</div>
+								
+								</div>
+								
+							</div>
     			</div>
     			<div class="snippet">
 					<p> Snippet Title 2 </p>
+						<div class="outer-duration">
+								<div class="max-duration">
+									<div class="start-timestamp" style="width:10%">
+										2:30
+									</div>
+
+									<div class="snippet-duration" style="width:30%">
+									</div>	
+									
+									<div class="end-timestamp">
+										3:40
+									</div>
+								
+								</div>
+								
+							</div>
     			</div>
     			<div class="snippet">
 					<p> Snippet Title 3 </p>
+						<div class="outer-duration">
+								<div class="max-duration">
+									<div class="start-timestamp" style="width:30%">
+										2:30
+									</div>
+
+									<div class="snippet-duration" style="width:40%">
+									</div>	
+									
+									<div class="end-timestamp">
+										3:40
+									</div>
+								
+								</div>
+								
+							</div>
     			</div>
     			<div class="snippet">
 					<p> Snippet Title 4 </p>
+						<div class="outer-duration">
+								<div class="max-duration">
+									<div class="start-timestamp" style="width:20%">
+										2:30
+									</div>
+
+									<div class="snippet-duration" style="width:60%">
+									</div>	
+									
+									<div class="end-timestamp">
+										3:40
+									</div>
+								
+								</div>
+								
+							</div>
     			</div>
     			<div class="snippet">
 					<p> Snippet Title 5 </p>
-    			</div>
-    			<div class="snippet">
-					<p> Snippet Title 6 </p>
+						<div class="outer-duration">
+								<div class="max-duration">
+									<div class="start-timestamp" style="width:40%">
+										2:30
+									</div>
+
+									<div class="snippet-duration" style="width:45%">
+									</div>	
+									
+									<div class="end-timestamp">
+										3:40
+									</div>
+								
+								</div>
+								
+							</div>
     			</div>
 			</div>		
 			
     	</div>
     	
-		<!-- grid for snippet forms -->
- 		<div class="grid_5 interval_form alpha">
+
+	<div class="grid_5 interval_form alpha">
     		<fieldset>
     			<legend>New Snippet</legend>
     			<p>1. Title:</p><%= f.text_field :title %><br/>
@@ -90,12 +151,28 @@
 			</fieldset>   
 	
 			<div class="save_cancel_button">
-				<button class="cancel">Cancel</button>
+				<button class="cancel">Close</button>
       		 	<button class="save">Save</button>
     		</div>
     	</div>
     	
-    	<div class="grid_5 snippet_edit"></div>
+    	<!--<div class="grid_5 snippet_edit"></div>-->s
     		
 			<% end %>
+			
+		<!--<div class="grid_5 snippet_info alpha">
+			<p class="info_title">Snippet Title 1</legend>
+			<p class="info_time">3:40-4:05</p>
+			<p class="info_description">
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+			</p>
+			
+			<div class="delete_edit_button">
+				<button class="delete">Delete</button>
+				<button class="save">Save</button>
+			</div>
+		</div>-->
+		
+		
 	</div>
+
