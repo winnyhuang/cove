@@ -796,7 +796,6 @@ div#video div p {
 
 
 .markstart {
-	display:inline;
 	height:30px;
 	width:90px;
 	background:#00CC00;
@@ -804,12 +803,22 @@ div#video div p {
 	border:transparent;
 }
 
+#start_mark{
+    margin-left:2px;
+    border:transparent;
+	height:25px;
+    width:88px;
+
+}
+
 #end_mark{
-	margin-left:5px;
+    margin-left:2px;
+    border:transparent;
+	height:25px;
+    width:88px;
 }
 
 .markend {
-	display:inline;
 	margin-top:10px;
 	margin-left:5px;
 	height:30px;
@@ -851,18 +860,7 @@ div#video div p {
 
 .snippet:hover{
 	color:#000000;
-    opacity: .7;
-    background:#757575;
-}
-
-.snippet:hover p{
-	color:white;
-}
-
-.interval_form {
-	margin-top:10px;
-   	height:270px;
-    background:#222222;
+    background: #222222;
 }
 
 .outer-duration{
@@ -907,12 +905,12 @@ div#video div p {
 	margin-top:20px;
     float: left;
     display: inline;
+    margin-left: 20px;
 }
 
 .interval_form legend{
 	color: #EC8723;
     font-size: 20px;
-    text-align: left;
     padding-bottom: 10px;
 }
 
@@ -925,9 +923,8 @@ div#video div p {
     margin-bottom:3px;
 }
 
-
 .interval_form input{
-	width:300px;
+	width:240px;
 	margin-bottom:7px;
 }
 

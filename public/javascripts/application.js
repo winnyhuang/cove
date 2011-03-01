@@ -16,20 +16,21 @@ $(document).ready(function(){
     return false;
   });
   
+  $('.snippet_info').hide();
   $('.interval_form').hide();
   $('.mark_times').hide();
   $('.mark_buttons').hide();
   $('.create_interval_button').click(function(){
     $('.create_interval_button').hide();
-     $('.mark_buttons').show("slide", {direction: "up"}, 1000);
-    $('.mark_times').show("slide", {direction: "up"}, 1000);
-    $('.interval_form').show("slide", {direction: "left"}, 1000);
+    $('.mark_buttons').show("slide", {direction: "left"}, 2000);
+    $('.interval_form').show("slide", {direction: "left"}, 2050);
+    $('.snippet_info').hide();
     return false;
   });
   
   $('button.cancel').click(function(){
-    $('.interval_form').hide("slide", {direction: "left"}, 1000);
-    $('.mark_times').hide("slide", {direction: "up"}, 1000);
+    $('.interval_form').hide("slide", {direction: "left"}, 500);
+    $('.mark_buttons').hide("slide", {direction: "left"}, 500);
     $('.create_interval_button').show();
     return false;
   });
@@ -37,7 +38,14 @@ $(document).ready(function(){
   $('.snippet_edit').hide();
   $('.snippet').click(function(){
     $('.interval_form').hide();
-    $('.snippet_edit').show();
+    $('.snippet_info').show();
+    $('.mark_buttons').delegate().hide("slide", {direction: "left"}, 500);
+    return false;
+  });
+  
+  $('button.delete').click(function(){
+    $('.snippet_info').hide();
+    $('.create_interval_button').show();
     return false;
   });
     
