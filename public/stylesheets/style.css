@@ -730,6 +730,30 @@ div#video div p {
 	
 }
 
+.empty{
+	height:270px;
+}
+
+/*.interval_time_background{
+	margin:10px;
+	height:60%;
+	width:40%;
+	opacity:.6;
+	background:black;
+	
+}
+
+.interval_time{
+	padding-top:10px;
+	color:#0297c1;
+	text-align:center;
+}
+
+.interval.tags{
+	float:left;
+}
+*/
+
 .snippet_button{	
 	display:hidden;
 	text-align:right;
@@ -738,13 +762,13 @@ div#video div p {
 
 .create_interval_button{
 	height:30px;
-	width:130px;
+	width:100px;
 	border:transparent;
 	opacity:1;
 	background:#EC8723;
 	color:white;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .create_interval_button:hover{
@@ -772,7 +796,6 @@ div#video div p {
 
 
 .markstart {
-	display:inline;
 	height:30px;
 	width:90px;
 	background:#00CC00;
@@ -780,12 +803,22 @@ div#video div p {
 	border:transparent;
 }
 
+#start_mark{
+    margin-left:2px;
+    border:transparent;
+	height:25px;
+    width:88px;
+
+}
+
 #end_mark{
-	margin-left:5px;
+    margin-left:2px;
+    border:transparent;
+	height:25px;
+    width:88px;
 }
 
 .markend {
-	display:inline;
 	margin-top:10px;
 	margin-left:5px;
 	height:30px;
@@ -816,7 +849,7 @@ div#video div p {
 
 .snippet{
     padding: 10px;
-    width: 580px;
+    width: 500px;
 }
 
 .snippet p{
@@ -827,7 +860,7 @@ div#video div p {
 
 .snippet:hover{
 	color:#000000;
-    background:#222222;
+    background: #222222;
 }
 
 .outer-duration{
@@ -872,12 +905,12 @@ div#video div p {
 	margin-top:20px;
     float: left;
     display: inline;
+    margin-left: 20px;
 }
 
 .interval_form legend{
 	color: #EC8723;
     font-size: 20px;
-    text-align: left;
     padding-bottom: 10px;
 }
 
@@ -890,7 +923,6 @@ div#video div p {
     margin-bottom:3px;
 }
 
-
 .interval_form input{
 	width:240px;
 	margin-bottom:7px;
@@ -899,6 +931,13 @@ div#video div p {
 .save_cancel_button{
 	margin-top:15px;
 	text-align:right;
+}
+
+.snippet_edit{
+    width: 100px;
+    height: 100px;
+    background-color: #757575;
+    margin-top:30px;
 }
 
 .cancel {

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 $(document).ready(function(){
+
       
   var videoPlayer = VideoJS.setup('cove-video-player',{
 //    offset: 30,
@@ -16,26 +16,36 @@ $(document).ready(function(){
     return false;
   });
   
+  $('.snippet_info').hide();
   $('.interval_form').hide();
+  $('.mark_times').hide();
+  $('.mark_buttons').hide();
   $('.create_interval_button').click(function(){
-    $('.interval_form').show("slide", {direction: "left"}, 1000);
+    $('.create_interval_button').hide();
+    $('.mark_buttons').show("slide", {direction: "left"}, 2000);
+    $('.interval_form').show("slide", {direction: "left"}, 2050);
+    $('.snippet_info').hide();
     return false;
   });
   
   $('button.cancel').click(function(){
-    $('.interval_form').hide("slide", {direction: "left"}, 1000);
+    $('.interval_form').hide("slide", {direction: "left"}, 500);
+    $('.mark_buttons').hide("slide", {direction: "left"}, 500);
     $('.create_interval_button').show();
     return false;
   });
   
-   $('button.save').click(function(){
-    $('.interval_form').hide("slide", {direction: "left"}, 1000);
-    $('.create_interval_button').show();
-    return false;
-  });
-  
+  $('.snippet_edit').hide();
   $('.snippet').click(function(){
     $('.interval_form').hide();
+    $('.snippet_info').show();
+    $('.mark_buttons').delegate().hide("slide", {direction: "left"}, 500);
+    return false;
+  });
+  
+  $('button.delete').click(function(){
+    $('.snippet_info').hide();
+    $('.create_interval_button').show();
     return false;
   });
     
@@ -67,8 +77,6 @@ $(document).ready(function(){
   });
 });
 
-
-=======
 /* Definition Function */
 $(document).ready(function(){
 	var hoverstatus = [];
@@ -129,4 +137,4 @@ $(document).ready(function(){
 	$(".fauxselect").hide();
 });
 
->>>>>>> 023cccf429d20c607a69302e06e391fa79967e06
+
