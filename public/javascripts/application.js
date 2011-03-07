@@ -1,13 +1,10 @@
 $(document).ready(function(){
 
-<<<<<<< HEAD
-      
-=======
->>>>>>> 5b22b5e0424327b5cbc59f5a06216bf70d01571c
-  var videoPlayer = VideoJS.setup('cove-video-player',{
+  var videoPlayer = $('#cove-video-player').VideoJS({
     offset: 30,
-    controlsHiding: false
-  }); 
+    controlsHiding: false,
+    controlsAtStart: true
+  }).player(); 
 
   function secondsToString(secs) {
     var deciseconds = Math.round(secs * 100);
@@ -40,12 +37,7 @@ $(document).ready(function(){
     return false;
   });
   
-<<<<<<< HEAD
-  $('.snippet_info').hide();
-  $('.interval_form').hide();
-  $('.mark_times').hide();
-  $('.mark_buttons').hide();
-=======
+
   $("#start_mark").change(function(){
     videoPlayer.snippetStart( stringToSeconds(this.value) );
     $(this).val( secondsToString( videoPlayer.snippetStart() ));
@@ -64,7 +56,6 @@ $(document).ready(function(){
   $('.interval_form').hide();
   $('.mark_buttons').hide();
   
->>>>>>> 5b22b5e0424327b5cbc59f5a06216bf70d01571c
   $('.create_interval_button').click(function(){
     $('.create_interval_button').hide();
     $('.mark_buttons').show("slide", {direction: "left"}, 2000);
@@ -81,20 +72,13 @@ $(document).ready(function(){
   });
   
   $('.snippet_edit').hide();
-<<<<<<< HEAD
-  $('.snippet').click(function(){
-    $('.interval_form').hide();
-    $('.snippet_info').show();
-    $('.mark_buttons').delegate().hide("slide", {direction: "left"}, 500);
-=======
-  
-  $('.snippet').click(function(){
+ 
+    $('.snippet').click(function(){
     $('.interval_form').hide();
     $('.snippet_info').show();
     $('.create_interval_button').show();
     $('.interval_browse').show();
     $('.mark_buttons').hide("slide", {direction: "left"}, 500);
->>>>>>> 5b22b5e0424327b5cbc59f5a06216bf70d01571c
     return false;
   });
   
@@ -107,7 +91,7 @@ $(document).ready(function(){
   /* End Billy's js */
     
  
-  $("#new_snippet").submit(function(event){
+  $("#new_snippet_form").submit(function(event){
     $('#snippet_offset').val( videoPlayer.snippetStart() );
     $('#snippet_duration').val( videoPlayer.snippetDuration() );
 
@@ -134,10 +118,8 @@ $(document).ready(function(){
   });
 });
 
-<<<<<<< HEAD
-/* Definition Function */
-=======
 /* Thumbnail fast scrub */    
+$(document).ready(function(){
     function changeSpriteWindow(obj){
         //TODO: figure out how to grab misc 10 pixel additional margin
         var extra_margin =10;
@@ -169,9 +151,9 @@ $(document).ready(function(){
     // immediately invoke thumbnails after page load
     $(document).ready(function(){$('.thumbnail_box').trigger('mouseover')});
     
+});
 /* end Thumbnail fast scrub */    
 
->>>>>>> 5b22b5e0424327b5cbc59f5a06216bf70d01571c
 $(document).ready(function(){
 	
 	// --------------------------------
@@ -261,9 +243,6 @@ $(document).ready(function(){
   $(".fauxselect").hide();
 });
 
-
-<<<<<<< HEAD
-=======
 // -------------------------------------------------------------------
 // Javascript for tagging
 // -------------------------------------------------------------------
@@ -370,4 +349,4 @@ $(document).ready(function(){
     });
 
   });  
->>>>>>> 5b22b5e0424327b5cbc59f5a06216bf70d01571c
+
