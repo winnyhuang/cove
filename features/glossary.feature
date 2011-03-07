@@ -11,7 +11,8 @@ Background:
 
 Scenario: Request existent definition
 	When I go to the definition page for "riffing"
-	Then I should see "Blah de blah riffing" within ".definition_holder"
+	Then I should see the element ".definition_holder"
+	And I should see "Blah de blah riffing" within ".definition_holder"
 
 Scenario: Request nonexistent definition
 	When I go to the definition page for "captain picard"

@@ -6,14 +6,17 @@ class Code < ActiveRecord::Base
   validates_uniqueness_of :name
   validates_presence_of :coding_type
 
-  #Sunspot Solr Stuff
-  searchable do
-    #primary terms
-    text :name, :default_boost => 2
-    text :description, :default_boost => 2
-    #side terms
-    text :coding_type
-  end
+  scope :phenomenon, lambda{where(:coding_type => "phenomenon")}
+  scope :people, lambda{where(:coding_type => "people")}
+  scope :camera_angle, lambda{ where(:coding_type => "camera_angle")}
+  scope :session_number, lambda{ where(:coding_type => "session_number")}
+  scope :session_type, lambda{ where(:coding_type => "session_type")}
+  scope :phrase_name, lambda {where(:coding_type => "phrase_name")}
+  scope :phrase_type, lambda {where(:coding_type => "phrase_type")}
+  scope :task_name, lambda {where(:coding_type => "task_name")}
+
+  scope :unapplied, lambda {|interval_id| joins(:codings).where("codings.interval_id <> ?", interval_id)}
+
 
 =begin
   modding code from Paul Panarease's interval import. Pratik Commented it

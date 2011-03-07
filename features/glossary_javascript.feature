@@ -6,15 +6,14 @@ Feature: Check defintion
 
 Background:
 	Given the following code exists:
-		|	name	|	description		|	coding type		|
-		|	riffing	|	Blah de blah riffing	|	phenomenon		|
+		|	name		|	description	|	coding type		|
+		|	practice	|	blah de blah	|	session type		|
 	And the following interval exists:
-		|	id	|	phrase type	|
-		|	1	|	riffing		|
+		|	id	|	session type	|
+		|	1	|	practice	|
 	And I am a regular user who is logged in
 
 Scenario: Getting the definition of a term
 	When I go to the intervals page
-	And I follow "Session 1"
-	And I look up the definition for ".phrase_type"
-	Then I should see "Blah de blah riffing"
+	And I look up the definition for ".session_type"
+	Then I should see "blah de blah"

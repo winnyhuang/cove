@@ -18,7 +18,3 @@ require "selenium-webdriver"
 When /^(?:|I )look up the definition for "([^"]*)"$/ do |selector|
 	page.driver.browser.execute_script %Q{ $("#{selector}").trigger("lookup"); }
 end
-
-When /^(?:|I )wait (\d+) seconds$/ do |seconds|
-	sleep seconds.to_i
-end
